@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import spyrosoft.testproject.dto.energyMixResponse.EnergyMixResponse;
-import spyrosoft.testproject.dto.response.ChargingWindowResponse;
+import spyrosoft.testproject.dto.chargingResponse.ChargingWindowResponse;
 import spyrosoft.testproject.service.ChargingWindowService;
 import spyrosoft.testproject.service.EnergyMixService;
 

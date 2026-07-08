@@ -1,10 +1,9 @@
 package spyrosoft.testproject.calculator;
 
-import jakarta.validation.constraints.AssertTrue;
 import org.junit.jupiter.api.Test;
 import spyrosoft.testproject.dto.energyMixRequest.FuelMixEntry;
 import spyrosoft.testproject.dto.energyMixRequest.GenerationInterval;
-import spyrosoft.testproject.dto.response.ChargingWindowResponse;
+import spyrosoft.testproject.dto.chargingResponse.ChargingWindowResponse;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

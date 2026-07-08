@@ -8,8 +8,7 @@ import org.springframework.stereotype.Component;
 
 import spyrosoft.testproject.dto.energyMixRequest.FuelMixEntry;
 import spyrosoft.testproject.dto.energyMixRequest.GenerationInterval;
-import spyrosoft.testproject.dto.response.ChargingWindowResponse;
-import spyrosoft.testproject.dto.energyMixResponse.EnergyMixResponse;
+import spyrosoft.testproject.dto.chargingResponse.ChargingWindowResponse;
 
 @Component
 public class EnergyMixCalculator {

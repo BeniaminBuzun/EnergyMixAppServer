@@ -1,4 +1,4 @@
-package spyrosoft.testproject.dto.response;
+package spyrosoft.testproject.dto.chargingResponse;
 
 import java.time.Instant;
 

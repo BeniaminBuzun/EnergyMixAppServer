@@ -6,7 +6,7 @@ import org.springframework.web.client.RestClient;
 import spyrosoft.testproject.calculator.EnergyMixCalculator;
 import spyrosoft.testproject.dto.energyMixRequest.DayEnergyMix;
 import spyrosoft.testproject.dto.energyMixRequest.GenerationInterval;
-import spyrosoft.testproject.dto.response.ChargingWindowResponse;
+import spyrosoft.testproject.dto.chargingResponse.ChargingWindowResponse;
 
 import java.time.Instant;
 import java.time.ZoneId;
@@ -24,19 +24,19 @@ public class ChargingWindowService {
 
 	DateTimeFormatter formatter;
 
+
 	public ChargingWindowService( EnergyMixCalculator energyMixCalculator) {
 		this.energyMixCalculator = energyMixCalculator;
 		this.restClient = RestClient.create();
-
 		this.formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm'Z'")
 				.withZone(ZoneId.of("UTC"));
-
 	}
 
 	public ChargingWindowResponse findBestWindow(int hours) {
 		getDataFromApi();
 		return energyMixCalculator.findBestChargingWindow(getDataFromApi(),hours);
 	}
+//	download data for next 3 days
 	private List<GenerationInterval> getDataFromApi (){
 		ArrayList<DayEnergyMix> data = new ArrayList<>();
 		for(int i=0;i<3;i++) {
